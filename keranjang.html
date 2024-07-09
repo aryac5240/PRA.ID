@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <style>
+        .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 30px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px; /* Jarak antara tombol + dan - */
+}
+#cart-items {
+    display: flex;
+    flex-direction: column-reverse; /* Item baru ditambahkan di bawah item sebelumnya */
+    gap: 10px; /* Jarak antar item */
+    list-style-type: none; /* Hapus tanda bullet dari daftar */
+    padding: 0;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr; /* Sesuaikan dengan grid-template-columns di #cart-items */
+    gap: 10px; /* Jarak antar kolom */
+    padding: 10px;
+    border: 1px solid #ccc; /* Garis tepi item */
+    border-radius: 5px; /* Sudut melengkung */
+    align-items: center; /* Posisi vertikal tengah */
+}
+
+.item img {
+    max-width: 100px; /* Lebar maksimum gambar */
+    height: auto; /* Biarkan tinggi gambar disesuaikan */
+    border-radius: 5px; /* Sudut melengkung pada gambar */
+}
+
+.item h1, .item h2 {
+    margin: 0; /* Hapus margin bawaan */
+}
+
+.item .item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item .item-actions {
+    display: flex;
+    gap: 5px; /* Jarak antar tombol */
+}
+
+#total {
+    margin-top: 10px; /* Jarak atas dari total */
+    font-weight: bold;
+}
+
+/* General button styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* Specific button styles for different contexts */
+
+/* Button inside cart item */
+.cart-item button {
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.cart-item button:hover {
+    background-color: #0056b3;
+}
+
+.cart-item button:active {
+    background-color: #004085;
+}
+.item-actions {
+    display: flex;
+    justify-content: space-around; /* Membuat tombol 'Beli' berada di pojok kanan bawah */
+    align-items: center;
+}
+
+.buy-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #218838;
+}
+
+.buy-btn:active {
+    background-color: #1e7e34;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="pra.png">
+                    <h2><span class="danger">COLLECTION</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        arrow_back
+                    </span>
+                    <h3>kembali</h3>
+                </a>
+                <a href="log.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+    <main>
+        <div class="recent-orders">
+            <h2>Keranjang</h2>
+        </div>
+        <div class="recent-orders">
+            <div class="katalog" id="katalog">
+
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items"></ul>
+            <h1 id="total">Total: Rp 0.00</h1>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

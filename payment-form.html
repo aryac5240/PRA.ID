@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>Payment Form</title>
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+small {
+    color: #777;
+    font-size: 12px;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-item img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.payment-item .item-details {
+    flex: 1;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:active {
+    background-color: #004085;
+}
+
+    </style> <!-- Sesuaikan dengan nama file CSS Anda -->
+</head>
+<body>
+    <div class="payment-container">
+        <a href="keranjang.html">
+            <span class="material-icons-sharp">
+                arrow_back
+            </span>
+        </a>
+        <h2>Form Pembayaran</h2>
+        <div id="paymentItems">
+            <!-- Container untuk menampilkan item yang dibeli -->
+        </div>
+        <div id="total">
+            <!-- Container untuk menampilkan total pembayaran -->
+        </div>
+        <form id="paymentForm">
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" required>
+            <small>Format: 081234567890</small>
+
+            <label for="address">Alamat Pengiriman:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <button type="submit">Bayar Sekarang</button>
+        </form>
+    </div>
+
+    <script src="payment.js"></script> <!-- Sesuaikan dengan nama file JavaScript Anda -->
+</body>
+</html>
