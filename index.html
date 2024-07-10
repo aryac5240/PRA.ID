@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+    .recent-orders {
+        text-align: center;
+        margin-top: 750px; /* Sesuaikan dengan jumlah margin atas yang diinginkan */
+    }
+
+    .recent-orders h1 {
+        font-size: 2.5em;
+        margin-top: 250px; /* Sesuaikan dengan jumlah margin atas yang diinginkan */
+    }
+    .recent-orders h1 span{
+        color : green;
+    }
+    .recent-orders h3{
+        font-size : 1.5rem;
+        margin-top: 100px;
+    }
+
+    /* Aturan CSS lainnya tetap sama */
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <title>PRA.ID</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="pra.png">
+                    <h2><span class="danger">COLLECTION</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        home
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="clothes.html">
+                    <span class="material-icons-sharp">
+                        checkroom
+                    </span>
+                    <h3>Baju & Jaket</h3>
+                </a>
+                <a href="tas.html">
+                    <span class="material-icons-sharp">
+                       backpack
+                    </span>
+                    <h3>Tas Pria & Wanita</h3>
+                </a>
+                <a href="log.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2 class="">SELAMAT DATANG DI PRA.<span class="danger">COLLECTION</span><br>PUSAT FASHION ONLINE INDONESIA</h2>
+            </div>
+            <div class="recent-orders">
+                <div class="katalog" id="katalog">
+                    <div class="katalog-item">
+                        <img src="foto/baju.jpg" alt="tshirt" class="product-image">
+                        <h4>T-Shirt Polos</h4>
+                        <p>Rp. 75.000</p>
+                        <button class="beli-btn" data-name="T-Shirt Polos" data-price="75000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/jaket varsity.jpg" alt="JACKET VARSITY" class="product-image">
+                        <h4>JACKET VARSITY</h4>
+                        <p>Rp 350,000.00</p>
+                        <button class="beli-btn" data-name="Jacket Varsity" data-price="350000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/jacket.jpg" alt="JACKET KULIT" class="product-image">
+                        <h4>JACKET KULIT</h4>
+                        <p>Rp 250,000.00</p>
+                        <button class="beli-btn" data-name="JACKET KULIT" data-price="250000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/jaket.jpg" alt="JACKET RIDING" class="product-image">
+                        <h4>JACKET RIDING </h4>
+                        <p>Rp 420,000.00</p>
+                        <button class="beli-btn" data-name="Jacket Riding" data-price="420000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/backpack.jpg" alt="BACKPACK PRIA" class="product-image">
+                        <h4>BACKPACK PRIA</h4>
+                        <p>Rp 220,000.00</p>
+                        <button class="beli-btn" data-name="Backpack Pria" data-price="220000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/backpack wanita.png" alt="BACKPACK PEREMPUAN" class="product-image">
+                        <h4>BACKPACK_PEREMPUAN</h4>
+                        <p>Rp 320,000.00</p>
+                        <button class="beli-btn" data-name="backpack Perempuan" data-price="320000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/totebag wanita.png" alt="TOTEBAG PEREMPUAN"class="product-image">
+                        <h4>TOTEBAG PEREMPUAN</h4>
+                        <p>Rp 320,000.00</p>
+                        <button class="beli-btn" data-name="Totebag Perempuan" data-price="320000">+</button>
+                    </div>
+                    <div class="katalog-item">
+                        <img src="foto/totebag.jpg" alt="TOTEBAG" class="product-image">
+                        <h4>TOTEBAG</h4>
+                        <p>Rp 320,000.00</p>
+                        <button class="beli-btn" data-name="TOTEBAG" data-price="320000">+</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <a href="keranjang.html">
+                    <span class="material-icons-sharp">
+                        shopping_cart_checkout
+                    </span>
+                </a>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="pra.jpg">
+                    <h2>PRA.<span class="danger">COLLECTION</span></h2>
+                    <p>Toko Terpercaya</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Jadwal Operasional</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Jam Kerja</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Jam Kerja</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   
+</body>
+<script src="index.js"></script>
+<script src="script.js"></script>
+</html>
